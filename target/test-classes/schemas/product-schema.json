@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["status", "code", "total", "data"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["OK"]
+    },
+    "code": {
+      "type": "integer"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "ean", "upc", "image", "net_price", "taxes", "price", "categories", "tags"],
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "ean": { "type": "string" },
+          "upc": { "type": "string" },
+          "image": { "type": "string" },
+          "images": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": { "type": "string" },
+                "description": { "type": "string" },
+                "url": { "type": "string" }
+              }
+            }
+          },
+          "net_price": { "type": "number" },
+          "taxes": { "type": "integer" },
+          "price": { "type": "number" },
+          "categories": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                { "type": "integer" },
+                { "type": "string" }
+              ]
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
+

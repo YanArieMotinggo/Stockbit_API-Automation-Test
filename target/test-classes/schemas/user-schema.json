@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["status", "code", "total", "data"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["OK"]
+    },
+    "code": {
+      "type": "integer"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "uuid", "firstname", "lastname", "username", "password", "email", "ip", "macAddress", "website", "image"],
+        "properties": {
+          "id": { "type": "integer" },
+          "uuid": { "type": "string", "pattern": "^[0-9a-fA-F-]{36}$" },
+          "firstname": { "type": "string" },
+          "lastname": { "type": "string" },
+          "username": { "type": "string" },
+          "password": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "ip": { "type": "string" },
+          "macAddress": { "type": "string" },
+          "website": { "type": "string" },
+          "image": { "type": "string" }
+        }
+      }
+    }
+  }
+}
+

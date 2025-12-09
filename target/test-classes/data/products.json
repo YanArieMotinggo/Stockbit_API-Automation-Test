@@ -1,0 +1,13 @@
+{
+  "valid_price_min": [0.01, 10.00, 50.00, 100.00],
+  "valid_price_max": [100.00, 500.00, 1000.00, 5000.00],
+  "valid_taxes": [5, 10, 12, 15, 22, 25],
+  "invalid_taxes": [-1, 101, 200],
+  "category_types": ["integer", "string", "uuid"],
+  "price_ranges": [
+    {"min": 10, "max": 100},
+    {"min": 50, "max": 500},
+    {"min": 100, "max": 1000}
+  ]
+}
+
