@@ -1,0 +1,8 @@
+{
+  "valid_types": ["any", "pokemon"],
+  "valid_widths": [100, 320, 640, 800, 1024],
+  "valid_heights": [100, 240, 480, 600, 768],
+  "invalid_widths": [0, -1, -100],
+  "invalid_heights": [0, -1, -100]
+}
+

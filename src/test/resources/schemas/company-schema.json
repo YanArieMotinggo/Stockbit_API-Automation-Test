@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["status", "code", "total", "data"],
+  "properties": {
+    "status": { "type": "string", "enum": ["OK"] },
+    "code": { "type": "integer" },
+    "locale": { "type": "string" },
+    "total": { "type": "integer", "minimum": 0 },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "email", "vat", "phone", "country", "addresses", "website", "image", "contact"],
+        "properties": {
+          "id": { "type": "integer" },
+          "name": { "type": "string" },
+          "email": { "type": "string" },
+          "vat": { "type": "string" },
+          "phone": { "type": "string" },
+          "country": { "type": "string" },
+          "website": { "type": "string" },
+          "image": { "type": "string" },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "integer" },
+                "street": { "type": "string" },
+                "streetName": { "type": "string" },
+                "buildingNumber": { "type": "string" },
+                "city": { "type": "string" },
+                "zipcode": { "type": "string" },
+                "country": { "type": "string" },
+                "country_code": { "type": "string" },
+                "latitude": { "type": "number" },
+                "longitude": { "type": "number" }
+              }
+            }
+          },
+          "contact": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "integer" },
+              "firstname": { "type": "string" },
+              "lastname": { "type": "string" },
+              "email": { "type": "string" },
+              "phone": { "type": "string" },
+              "birthday": { "type": "string" },
+              "gender": { "type": "string" },
+              "website": { "type": "string" },
+              "image": { "type": "string" },
+              "address": { "type": "object" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -8,6 +8,8 @@ public class Api {
     public static final String BASE = "https://fakerapi.it/api/v2";
     public static final String PRODUCTS = "/products";
     public static final String USERS = "/users";
+    public static final String COMPANIES = "/companies";
+    public static final String IMAGES = "/images";
     public static final int DEFAULT_QTY = 10;
     public static final int MAX_QTY = 1000;
 

@@ -14,7 +14,9 @@ src/
     ├── java/
     │   ├── BaseTest.java     ← Common test methods (inherit this)
     │   ├── ProductTest.java  ← Tests /products
-    │   └── UserTest.java     ← Tests /users
+    │   ├── UserTest.java     ← Tests /users
+    │   ├── CompanyTest.java  ← Tests /companies
+    │   └── ImageTest.java    ← Tests /images
     │
     └── resources/
         ├── data/             ← Test inputs
@@ -23,7 +25,9 @@ src/
         │   └── users.json
         └── schemas/          ← Expected response shapes
             ├── product-schema.json
-            └── user-schema.json
+            ├── user-schema.json
+            ├── company-schema.json
+            └── image-schema.json
 ```
 
 ## Flow
