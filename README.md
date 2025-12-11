@@ -2,6 +2,10 @@
 
 API tests for [FakerAPI.it](https://fakerapi.it/api/v2)
 
+## Video
+
+https://drive.google.com/file/d/14lxzoGplZyGKjIxMxab_x0iCLgaCFIwQ/view?usp=sharing
+
 ## What We Test
 
 ###  Products (`/products`)
